@@ -13,11 +13,11 @@ Read the install.sh script before running it to make sure it is not going to
 do anything horrible to your environment.
 
 
-## How to install
-* pull this repository down to your home directory then:
+## How to clone and install
 
-        cd ~/.mydotfiles
-        ./install.sh
+    $ git clone git@github.com:jamsyoung/mydotfiles.git ~/.mydotfiles
+    $ cd ~/.mydotfiles
+    $ ./install.sh
 
 
 [1]: https://github.com/necolas/dotfiles
