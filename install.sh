@@ -1,24 +1,28 @@
 #!/bin/bash
 
+echo "[INFO] Backing up files"
+
 # backup any existing files
-mkdir "$HOME/.mydotfiles/backup"
+mkdir -v ~/.mydotfiles/backup
 
-mv "$HOME/.bash_profile" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.bashrc" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.git-autocompletion.sh" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.gitattributes" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.gitconfig" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.gitignore" "$HOME/.mydotfiles/backup/"
-mv "$HOME/.ssh/config" "$HOME/.mydotfiles/backup/.ssh-config"
-mv "$HOME/.vimrc" "$HOME/.mydotfiles/backup/"
+mv -fv ~/.bash_profile ~/.mydotfiles/backup/
+mv -fv ~/.bashrc ~/.mydotfiles/backup/
+mv -fv ~/.git-autocompletion.sh ~/.mydotfiles/backup/
+mv -fv ~/.gitattributes ~/.mydotfiles/backup/
+mv -fv ~/.gitconfig ~/.mydotfiles/backup/
+mv -fv ~/.gitignore ~/.mydotfiles/backup/
+mv -fv ~/.ssh/config ~/.mydotfiles/backup/.ssh-config
+mv -fv ~/.vimrc ~/.mydotfiles/backup/
 
+echo
+echo "[INFO] Symlinking environment"
 
 # symlink in the new dotfiles
-ln -s "$HOME/.mydotfiles/bash/bash_profile" "$HOME/.bash_profile"
-ln -s "$HOME/.mydotfiles/bash/bashrc" "$HOME/.bashrc"
-ln -s "$HOME/.mydotfiles/git/git-autocompletion.sh" "$HOME/.git-autocompletion.sh"
-ln -s "$HOME/.mydotfiles/git/gitattributes" "$HOME/.gitattributes"
-ln -s "$HOME/.mydotfiles/git/gitconfig" "$HOME/.gitconfig"
-ln -s "$HOME/.mydotfiles/git/gitignore" "$HOME/.gitignore"
-ln -s "$HOME/.mydotfiles/ssh/config" "$HOME/.ssh/config"
-ln -s "$HOME/.mydotfiles/vim/vimrc" "$HOME/.vimrc"
+ln -fsv ~/.mydotfiles/bash/bash_profile ~/.bash_profile
+ln -fsv ~/.mydotfiles/bash/bashrc ~/.bashrc
+ln -fsv ~/.mydotfiles/git/git-autocompletion.sh ~/.git-autocompletion.sh
+ln -fsv ~/.mydotfiles/git/gitattributes ~/.gitattributes
+ln -fsv ~/.mydotfiles/git/gitconfig ~/.gitconfig
+ln -fsv ~/.mydotfiles/git/gitignore ~/.gitignore
+ln -fsv ~/.mydotfiles/ssh/config ~/.ssh/config
+ln -fsv ~/.mydotfiles/vim/vimrc ~/.vimrc
