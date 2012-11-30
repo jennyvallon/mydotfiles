@@ -1,0 +1,19 @@
+# bash_profile
+
+sourcefiles=(
+	"$HOME/.mydotfiles/bash/exports"
+	"$HOME/.mydotfiles/bash/aliases"
+	"$HOME/.mydotfiles/bash/bash_prompt"
+	"$HOME/.mydotfiles/bash/git-autocompletion.sh"
+)
+
+for file in ${sourcefiles[@]}; do
+	source "$file"
+done
+
+# neverending bash history
+shopt -s histappend
+
+
+# set default file permissions
+umask 002
