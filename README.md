@@ -13,11 +13,13 @@ Read the install.sh script before running it to make sure it is not going to
 do anything horrible to your environment.
 
 
-## How to clone and install
+## How to clone, install, and add personal git settings
 
     $ git clone git@github.com:jamsyoung/mydotfiles.git ~/.mydotfiles
     $ cd ~/.mydotfiles
     $ ./install.sh
+    $ git config --global user.name "Your Name"
+    $ git config --global user.email you@example.com
 
 
 [1]: https://github.com/necolas/dotfiles
