@@ -14,8 +14,9 @@ username and email.
 to do anything you don't want it to do.
 
 
-## How to clone, install, and add personal git settings.  It is important to
-   point out that this needs to be in ~/.mydotfiles to work properly.
+## How to clone, install, and add personal git settings.
+It is important to point out that this needs to be in ~/.mydotfiles to work
+properly.
 
     $ git clone git@github.com:jamsyoung/mydotfiles.git ~/.mydotfiles
     $ cd ~/.mydotfiles
