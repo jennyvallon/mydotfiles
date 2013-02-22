@@ -5,9 +5,9 @@ I use added in.
 
 
 ## Before installing
-THIS WILL OVERWRITE YOUR FILES, but does back them up in '~/.mydotfiles/backup'
+THIS WILL OVERWRITE YOUR FILES, but does back them up in `~/.mydotfiles/backup`
 before doing so.  You may want to make a copy anyway, SPECIFICALLY YOUR
-'.gitconfig'.  The one in this package WILL NOT set your git personal info, like
+`.gitconfig`.  The one in this package WILL NOT set your git personal info, like
 username and email.
 
 [Read the install.sh script][0] before running it to make sure it is not going
@@ -15,7 +15,7 @@ to do anything you don't want it to do.
 
 
 ## How to clone, install, and add personal git settings.
-It is important to point out that this needs to be in '~/.mydotfiles' to work
+It is important to point out that this needs to be in `~/.mydotfiles` to work
 properly.
 
     $ git clone git@github.com:jamsyoung/mydotfiles.git ~/.mydotfiles
