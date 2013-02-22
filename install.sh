@@ -11,6 +11,7 @@ mv -fv ~/.git-autocompletion.sh ~/.mydotfiles/backup/
 mv -fv ~/.gitattributes ~/.mydotfiles/backup/
 mv -fv ~/.gitconfig ~/.mydotfiles/backup/
 mv -fv ~/.gitignore ~/.mydotfiles/backup/
+mv -fv ~/.screenrc ~/.mydotfiles/backup/
 mv -fv ~/.ssh/config ~/.mydotfiles/backup/.ssh-config
 mv -fv ~/.vimrc ~/.mydotfiles/backup/
 mv -fv ~/.vim ~/.mydotfiles/backup/
@@ -29,6 +30,7 @@ ln -fsv ~/.mydotfiles/git/git-autocompletion.sh ~/.git-autocompletion.sh
 ln -fsv ~/.mydotfiles/git/gitattributes ~/.gitattributes
 ln -fsv ~/.mydotfiles/git/gitconfig ~/.gitconfig
 ln -fsv ~/.mydotfiles/git/gitignore ~/.gitignore
+ln -fsv ~/.mydotfiles/screen/screenrc ~/.screenrc
 ln -fsv ~/.mydotfiles/ssh/config ~/.ssh/config
 ln -fsv ~/.mydotfiles/vim/vimrc ~/.vimrc
 ln -Fsv ~/.mydotfiles/vim ~/.vim
