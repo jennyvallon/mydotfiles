@@ -18,7 +18,7 @@ to do anything you don't want it to do.
 It is important to point out that this needs to be in `~/.mydotfiles` to work
 properly.
 
-    $ git clone git@github.com:jamsyoung/mydotfiles.git ~/.mydotfiles
+    $ git clone git://github.com/jamsyoung/mydotfiles.git ~/.mydotfiles
     $ cd ~/.mydotfiles
     $ ./install.sh
     $ git config --global user.name "Your Name"
