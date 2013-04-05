@@ -12,7 +12,7 @@ export MANPAGER="less -X"
 export HISTSIZE=30000
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
-export HISTIGNORE="&:l:ls:lt:la:cd *:exit:history"
+export HISTIGNORE="&:l:ls:lt:la:exit:history"
 
 # update PATH
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
