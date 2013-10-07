@@ -28,3 +28,7 @@ properly.
 [0]: https://github.com/jamsyoung/mydotfiles/blob/master/install.sh
 [1]: https://github.com/necolas/dotfiles
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamsyoung/mydotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
