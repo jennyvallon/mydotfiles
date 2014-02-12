@@ -14,6 +14,9 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:l:ls:lt:la:exit:history"
 
+# Tab titles in terminal apps that support them
+export PROMPT_COMMAND='echo -e "\033];$HOSTNAME\007"'
+
 # update PATH
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
 export PATH
