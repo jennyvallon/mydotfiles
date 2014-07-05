@@ -4,6 +4,14 @@ This is just another dotfiles repository.  This is a trimmed down version of
 I use added in.
 
 
+## What is the divergent branch?
+This repo started as a "getting started" point for a team of developers.  I
+have since then added some things more specific to my development habits.
+These changes are in the `divergent` branch.  If you are interested in
+languages such as [GO][go] and using tools like [rvm][rvm] and [nvm][nvm] feel
+free to check it out.
+
+
 ## Before installing
 THIS WILL OVERWRITE YOUR FILES, but does back them up in `~/.mydotfiles/backup`
 before doing so.  You may want to make a copy anyway, SPECIFICALLY YOUR
@@ -25,10 +33,15 @@ properly.
     $ git config --global user.email you@example.com
 
 
-[0]: https://github.com/jamsyoung/mydotfiles/blob/master/install.sh
-[1]: https://github.com/necolas/dotfiles
-
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamsyoung/mydotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+
+
+
+[0]: https://github.com/jamsyoung/mydotfiles/blob/master/install.sh
+[1]: https://github.com/necolas/dotfiles
+[go]: http://golang.org/
+[nvm]: https://github.com/creationix/nvm
+[rvm]: https://rvm.io/
