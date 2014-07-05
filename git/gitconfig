@@ -28,6 +28,7 @@
 
 	# Display the number of commits per author in numerical order
 	who = shortlog -sn --
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
 [color]
 	# color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
