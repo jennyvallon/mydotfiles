@@ -21,5 +21,15 @@ export HISTIGNORE="&:l:ls:lt:la:exit:history"
 export PROMPT_COMMAND='echo -e "\033];$HOSTNAME\007"'
 
 # update PATH
-[ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
+[ -d "$HOME/bin" ] && PATH="/usr/local/sbin:$PATH:$HOME/bin";
+PATH="/usr/local/sbin:$PATH"
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# go workspace
+export GOPATH=$HOME/dev/go
+export PATH=$GOPATH/bin:$PATH
+
+
 export PATH
