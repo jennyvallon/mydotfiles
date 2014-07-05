@@ -24,5 +24,9 @@ PATH="/usr/local/sbin:$PATH"
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
 
-export PATH
+# go workspace
+export GOPATH=$HOME/dev/go
+export PATH=$GOPATH/bin:$PATH
 
+
+export PATH
