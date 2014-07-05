@@ -1,5 +1,8 @@
 # exports
 
+# set ls colors
+export LSCOLORS='gxfxcxdxbxegedabagacad'
+
 # set vim as default editor
 export EDITOR="vim"
 export CVSEDITOR="vim"
