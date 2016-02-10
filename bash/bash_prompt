@@ -21,23 +21,34 @@ tput sgr 0 0
 # Base styles and color palette
 # Solarized colors
 # https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+# http://misc.flogisoft.com/_media/bash/colors_format/256_colors_fg.png
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
-SOLAR_YELLOW=$(tput setaf 136)
-SOLAR_ORANGE=$(tput setaf 166)
-SOLAR_RED=$(tput setaf 124)
-SOLAR_MAGENTA=$(tput setaf 125)
-SOLAR_VIOLET=$(tput setaf 61)
+BLACK=$(tput setaf 16)
 SOLAR_BLUE=$(tput setaf 33)
 SOLAR_CYAN=$(tput setaf 37)
+SOLAR_VIOLET=$(tput setaf 61)
 SOLAR_GREEN=$(tput setaf 64)
-SOLAR_WHITE=$(tput setaf 254)
+SOLAR_MAGENTA=$(tput setaf 125)
+SOLAR_YELLOW=$(tput setaf 136)
+SOLAR_RED=$(tput setaf 160)
+SOLAR_ORANGE=$(tput setaf 166)
+SOLAR_BASE3=$(tput setaf 230)  # base3
+SOLAR_BASE03=$(tput setaf 234) # base03
+SOLAR_BASE02=$(tput setaf 235) # base02
+SOLAR_BASE01=$(tput setaf 240) # base01
+SOLAR_BASE00=$(tput setaf 241) # base00
+SOLAR_BASE0=$(tput setaf 244)  # base0
+SOLAR_BASE1=$(tput setaf 245)  # base1
+SOLAR_WHITE=$(tput setaf 254)  # base2
 
-style_user="\[${RESET}${SOLAR_ORANGE}\]"
+style_branch="${SOLAR_CYAN}"
+style_chars="\[${RESET}${SOLAR_WHITE}\]"
+style_history="\[${RESET}${SOLAR_BASE01}\]"
 style_host="\[${RESET}${SOLAR_YELLOW}\]"
 style_path="\[${RESET}${SOLAR_GREEN}\]"
-style_chars="\[${RESET}${SOLAR_WHITE}\]"
-style_branch="${SOLAR_CYAN}"
+style_time="\[${RESET}${SOLAR_MAGENTA}\]"
+style_user="\[${RESET}${SOLAR_ORANGE}\]"
 
 if [[ "$SSH_TTY" ]]; then
     # connected via ssh
@@ -70,14 +81,20 @@ function prompt_git() {
     echo -ne "${SOLAR_WHITE} on ${style_branch}${output}"
 }
 
+function node_version() {
+    version="$(node --version)"
+    echo -ne " ${SOLAR_WHITE}$(node --version)"
+}
 
 # Build the prompt
-PS1="\n" # Newline
-PS1+="${style_user}\u" # Username
-PS1+="${style_chars}@" # @
-PS1+="${style_host}\h" # Host
-PS1+="${style_chars}: " # :
-PS1+="${style_path}\w" # Working directory
-PS1+="\$(prompt_git)" # Git details
-PS1+="\n" # Newline
+PS1="\n"                   # Newline
+PS1+="${style_history}\! " # History
+PS1+="${style_time}\t "    # Timestamp
+PS1+="${style_user}\u"     # Username
+PS1+="${style_chars}@"     # @
+PS1+="${style_host}\h "    # Host
+PS1+="${style_path}\w"     # Working directory
+PS1+="\$(prompt_git)"      # Git details
+PS1+="\$(node_version)"    # Node details
+PS1+="\n"                  # Newline
 PS1+="${style_chars}\$ \[${RESET}\]" # $ (and reset color)
