@@ -24,12 +24,16 @@ export PROMPT_COMMAND='echo -e "\033];$HOSTNAME\007"'
 [ -d "$HOME/bin" ] && PATH="/usr/local/sbin:$PATH:$HOME/bin";
 PATH="/usr/local/sbin:$PATH"
 
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
-
 # go workspace
-export GOPATH=$HOME/dev/go
-export PATH=$GOPATH/bin:$PATH
-
+#export GOPATH=$HOME/dev/go
+#export PATH=$GOPATH/bin:$PATH
 
 export PATH
+
+# BitchX
+export IRCNICK=yungjames
+export IRCUSER=yungjames
+#export IRC_HOST=
+export IRCNAME=YungJames
+export IRCSERVER=irc.freenode.net
+
