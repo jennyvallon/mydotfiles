@@ -8,7 +8,7 @@ alias ~="cd ~"
 
 # ls variations
 # long form in color
-alias l="ls -lG"
+alias l="ls -lGh"
 
 # long form in color ordered by last modified
 alias lt="ls -tlG"
