@@ -151,3 +151,5 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 " :FormatJSON will pretty print json (and validate it)
 com! FormatJSON %!python -m json.tool
 
+" allows scrolling in cli w/ trackpad / mousewheel
+set mouse=a
