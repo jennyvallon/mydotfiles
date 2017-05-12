@@ -156,13 +156,34 @@ set mouse=a
 
 " NERDTree config
 
-let NERDTreeIgnore=[ '.git', '.DS_Store', '\.vim$', '\~$', 'node_modules' ]
+let NERDTreeIgnore=[
+    \ '.git',
+    \ '.DS_Store',
+    \ '\.vim$',
+    \ '\~$',
+    \ 'node_modules'
+\ ]
+
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+\ }
+
+
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='.  a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
   exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'.  a:extension .'$#'
 endfunction
-
 
 call NERDTreeHighlightFile('jade',   'green',   'none', 'green',   '#151515')
 call NERDTreeHighlightFile('ini',    'yellow',  'none', 'yellow',  '#151515')
