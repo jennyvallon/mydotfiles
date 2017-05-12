@@ -9,6 +9,6 @@ Host *
 	ServerAliveCountMax 3
 	ServerAliveInterval 600
 
-Host dmtscm dmtscm.turner.com
-	Hostname dmtscm
-	Compression yes
+Host cgi8prod5
+	Hostname cgi8prod5.turner.com
+	User jayoung
