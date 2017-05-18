@@ -1,14 +1,15 @@
 # bash_profile
 
 sourcefiles=(
-	~/.mydotfiles/bash/exports
-	~/.mydotfiles/bash/aliases
-	~/.mydotfiles/bash/bash_prompt
-	~/.mydotfiles/git/git-autocompletion.sh
+    ~/.mydotfiles/bash/exports
+    ~/.mydotfiles/bash/aliases
+    ~/.mydotfiles/bash/bash_prompt
+    ~/.mydotfiles/git/git-autocompletion.sh
+    ~/.mydotfiles/npm/npm-completion.sh
 )
 
 for file in ${sourcefiles[@]}; do
-	source $file
+    source $file
 done
 
 # neverending bash history
