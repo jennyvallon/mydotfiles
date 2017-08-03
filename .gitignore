@@ -1,3 +1,5 @@
 backup
 .viminfo
 .netrwhist
+vim/bundle/*
+vim/plugged/*
