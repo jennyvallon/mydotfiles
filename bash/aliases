@@ -15,3 +15,6 @@ alias lt="ls -tlG"
 
 # long form, in color, showing all files
 alias la="ls -laG"
+
+
+alias bitchx="BitchX"

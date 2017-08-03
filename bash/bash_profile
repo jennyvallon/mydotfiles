@@ -26,3 +26,8 @@ export NVM_DIR="$HOME/.nvm"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH=$HOME/dev/go-lang/bin:$PATH
+export PATH=$PATH:/usr/local/gnupg-2.1/bin
+export GOPATH=/Users/jyoung/dev/go-lang/
