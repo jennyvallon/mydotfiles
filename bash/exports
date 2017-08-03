@@ -22,7 +22,7 @@ export PROMPT_COMMAND='echo -e "\033];$HOSTNAME\007"'
 
 # update PATH
 [ -d "$HOME/bin" ] && PATH="/usr/local/sbin:$PATH:$HOME/bin";
-PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/sbin:$PATH:$HOME/Library/Python/2.7/bin"
 
 # go workspace
 #export GOPATH=$HOME/dev/go

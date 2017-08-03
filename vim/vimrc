@@ -6,6 +6,8 @@
 " Disable Vi compatibility
 set nocompatible
 
+set shell=sh
+
 " Point to location of pathogen submodule (since it's not in .vim/autoload)
 "silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Call pathogen plugin management
@@ -198,3 +200,37 @@ call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('coffee', 'Red',     'none', 'red',     '#151515')
 call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+call plug#end()
+
+" max line lengh that prettier will wrap on
+let g:prettier#config#print_width = 120
+
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true' 
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true' 
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true' 
+
+" none|es5|all
+let g:prettier#config#trailing_comma = 'none'
+
+" flow|babylon|typescript|postcss|json|graphql
+let g:prettier#config#parser = 'flow'
+
+

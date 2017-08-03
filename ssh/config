@@ -1,7 +1,6 @@
 Host *
 	Protocol 2,1
 	PubkeyAuthentication yes
-	RSAAuthentication yes
 	PasswordAuthentication yes
 	PreferredAuthentications publickey,password,keyboard-interactive
 	ForwardAgent yes
