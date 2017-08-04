@@ -51,16 +51,8 @@
 	# ref: http://linux.die.net/man/1/git-log
 	# Result: <short-sha> <commit-message> (<pointer-names>) -- <commit-author-name>; <relative-time>
 	nice = "%C(yellow)%h%C(reset) %C(white)%s%C(cyan)%d%C(reset) -- %an; %ar"
+
 [user]
 	name = jamie young
 	email = jmeyoung@gmail.com
-#    signingkey = 9A1F5E66
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
-[github]
-	user = jamsyoung
-	token = 3684933c56ed9b55beed3ec844b587af295e8d60
-[ghi]
-	token = !security find-internet-password -a jamsyoung -s github.com -l 'ghi token' -w
+
