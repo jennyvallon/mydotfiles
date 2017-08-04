@@ -9,6 +9,7 @@ $ git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/ner
 $ git clone https://github.com/ervandew/supertab.git ~/.vim/bundle/supertab
 $ git clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 $ git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/bundle/editorconfig-vim
+$ git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 ```
 
 ## Plug based
