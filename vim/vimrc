@@ -27,14 +27,42 @@ if has("autocmd")
 endif
 
 if has("syntax")
-    " Enable syntax highlighting
-    syntax enable
-    " Set 256 color terminal support
-    set t_Co=256
-    " Set dark background
-    set background=dark
-    " Set colorscheme
-    silent! colorscheme elflord
+  " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+  if (empty($TMUX))
+    if (has("nvim"))
+      let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+    if (has("termguicolors"))
+      set termguicolors
+    endif
+  endif
+
+  " Enable syntax highlighting
+  syntax enable
+  " Set 256 color terminal support
+  set t_Co=256
+  " Set dark background
+  set background=dark
+  " Set colorscheme
+  " silent! colorscheme elflord
+  "let g:onedark_termcolors = 256
+
+  " onedark.vim override: Don't set a background color when running in a terminal;
+  " just use the terminal's background color
+  " `gui` is the hex color code used in GUI mode/nvim true-color mode
+  " `cterm` is the color code used in 256-color mode
+  " `cterm16` is the color code used in 16-color mode
+  if (has("autocmd") && !has("gui_running"))
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
+  end
+
+  let g:onedark_color_overrides = {
+    \ "comment_grey": {"gui": "#5C6370", "cterm": "60", "cterm16": "15" },
+    \ "purple": { "gui": "#C678DD", "cterm": "177", "cterm16": "5" }
+  \}
+
+  silent! colorscheme onedark
 endif
 
 if has("cmdline_info")
@@ -95,12 +123,12 @@ set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
-" Use 4 spaces for indentation
-set shiftwidth=4
-" Use 4 spaces for soft tab
-set softtabstop=4
-" Use 4 spaces for tab
-set tabstop=4
+" Use 2 spaces for indentation
+set shiftwidth=2
+" Use 2 spaces for soft tab
+set softtabstop=2
+" Use 2 spaces for tab
+set tabstop=2
 " Expand tab to spaces
 set expandtab
 " Enable line numbers
@@ -144,8 +172,8 @@ nnoremap <C-y> 3<C-y>
 vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 
-au BufRead,BufNewFile *.ftl set filetype=freemarker
-au! Syntax freemarker source $HOME/.vim/syntax/ftl.vim
+"au BufRead,BufNewFile *.ftl set filetype=freemarker
+"au! Syntax freemarker source $HOME/.vim/syntax/ftl.vim
 
 " = will pretty print json (and validate it)
 au FileType json setlocal equalprg=python\ -m\ json.tool
@@ -154,10 +182,10 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 com! FormatJSON %!python -m json.tool
 
 " allows scrolling in cli w/ trackpad / mousewheel
+" This also breaks the copy on select feature of iterm2
 set mouse=a
 
 " NERDTree config
-
 let NERDTreeIgnore=[
     \ '.git',
     \ '.DS_Store',
@@ -236,17 +264,20 @@ let g:prettier#config#parser = 'flow'
 
 
 
-"au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
-"
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_javascript_eslint_exec = '/Users/jyoung/.nvm/versions/node/v5.9.0/bin/eslint'
-"
-"set nowrap
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = '/Users/yungjames/.nvm/versions/node/v8.2.1/bin/eslint'
+
+" this makes the syntastic quick fix window line readable
+hi QuickFixLine term=reverse ctermbg=0 guibg=Black
+
+set nowrap
+
+
