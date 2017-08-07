@@ -279,5 +279,5 @@ let g:syntastic_javascript_eslint_exec = '/Users/yungjames/.nvm/versions/node/v8
 hi QuickFixLine term=reverse ctermbg=0 guibg=Black
 
 set nowrap
-
+set colorcolumn=120
 
