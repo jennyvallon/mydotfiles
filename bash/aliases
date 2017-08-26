@@ -18,3 +18,5 @@ alias la="ls -laG"
 
 
 alias bitchx="BitchX"
+alias aws-cnn="aws --profile cnn"
+
