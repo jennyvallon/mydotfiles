@@ -45,13 +45,13 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>4</string>
+	<string>1</string>
 	<key>NSColorPickerPageableNameListDefaults</key>
 	<string>1Web Safe Colors</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSFontPanelSizeSliderParams</key>
@@ -74,8 +74,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
-		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -166,7 +166,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>801 361 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>459 510 770 429 0 0 1680 1050 </string>
+	<string>500 409 918 381 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 730 1028 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -2139,13 +2139,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.95686274509803926</real>
+				<real>0.95686274766921997</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.95686274509803926</real>
+				<real>0.95686274766921997</real>
 				<key>Red Component</key>
-				<real>0.95686274509803926</real>
+				<real>0.95686274766921997</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
@@ -7169,9 +7169,9 @@
 	<key>iTerm Version</key>
 	<string>3.1.beta.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
+	<integer>6</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
-	<false/>
+	<true/>
 	<key>kCPKUseSystemColorPicker</key>
 	<false/>
 </dict>
