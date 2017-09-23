@@ -186,6 +186,15 @@ com! FormatJSON %!python -m json.tool
 set mouse=a
 
 " NERDTree config
+" open NERDTree automatically when vim starts up
+"autocmd vimenter * NERDTree
+
+" quit if NT is the only window left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" ctrl-n to open/close NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 let NERDTreeIgnore=[
     \ '.git',
     \ '.DS_Store',
@@ -230,12 +239,14 @@ call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 
 
+
+" Prettier config
 call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 call plug#end()
 
 " max line lengh that prettier will wrap on
-let g:prettier#config#print_width = 90
+let g:prettier#config#print_width = 120 
 
 " number of spaces per indentation level
 let g:prettier#config#tab_width = 2
@@ -263,7 +274,7 @@ let g:prettier#config#parser = 'flow'
 
 
 
-
+" Syntastic Config (ESLint)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -278,6 +289,9 @@ let g:syntastic_javascript_eslint_exec = '/Users/yungjames/.nvm/versions/node/v8
 " this makes the syntastic quick fix window line readable
 hi QuickFixLine term=reverse ctermbg=0 guibg=Black
 
+
+
+" misc
 set nowrap
-set colorcolumn=90
+set colorcolumn=120
 
